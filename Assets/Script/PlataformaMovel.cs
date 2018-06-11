@@ -38,11 +38,13 @@ public class PlataformaMovel : MonoBehaviour {
 	}
 
 
-	private void OnCollisionEnter2D(Collision2D collision){
-		if(collision.gameObject.CompareTag("Player")){
-			collision.transform.SetParent (this.gameObject.transform);
-		}	
-	}
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            collision.transform.SetParent(this.gameObject.transform);
+        }
+    }
 
 	private void OnCollisionExit2D(Collision2D collision){
 		collision.transform.SetParent (null);	
